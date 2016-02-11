@@ -6,11 +6,11 @@ generalData = [];
 
 
 //Please use 'direction' to use it in other js file or use 'test' to print on command prompt
-module.exports = function(src, dest) {
+module.exports = function(src, dest, key) {
   return {
     //********To use it in other JS file, returns a string with all the directions
     direction: function(cb) {
-      getDirections(src, dest, function(err, res) {
+      getDirections(src, dest, key, function(err, res) {
         //console.log("\n\tDisplaying General Info:\n \t Arrival Time: "+generalData[0].arrival_time+" \n\t Departure Time"+generalData[0].departure_time);
         if (err) {
           console.log(err);
@@ -20,11 +20,11 @@ module.exports = function(src, dest) {
     },
     //*********To use it for console
     test: function() {
-      getDirections(src, dest, function() {});
+      getDirections(src, dest, key, function() {});
     },
     //*********To use it in other JS file, returns a JSON object with general details of the journey
     getTransInfo: function(cb) {
-      getDirections(src, dest, function(err, res) {
+      getDirections(src, dest, key, function(err, res) {
         //console.log("\n\tDisplaying General Info:\n \t Arrival Time: "+generalData[0].arrival_time+" \n\t Departure Time"+generalData[0].departure_time);
         if (err) {
           console.log(err);
@@ -217,9 +217,9 @@ function parseDirection(src, dest, json) {
   }
 }
 
-function getDirections(src, dest, callback) {
+function getDirections(src, dest, key, callback) {
   request.get('https://maps.googleapis.com/maps/api/directions/json?alternatives=true&origin=' + src +
-  'Berlin&destination=' + dest + ',Berlin&mode=transit&key=AIzaSyBCroIiU9zWXaFxW0SE62fcSGxdQsP0XiY',
+  'Berlin&destination=' + dest + ',Berlin&mode=transit&key=' + key + '',
     function(error, response, body) {
       if (!error && response.statusCode == 200) {
         var direction_string = [];
