@@ -184,7 +184,7 @@ function parseDirection(src, dest, json) {
            */
 
           //Checking the condition whether it's a transit or walking to calculate no. of stops
-          var no_of_stops = (typeof (steps[i].transit_details) !== 'undefined') ? steps[i].transit_details.num_stops : 'Not Applicable'
+          var no_of_stops = (typeof (steps[i].transit_details) !== 'undefined') ? steps[i].transit_details.num_stops : 'Not Applicable';
           var line_name = (typeof (steps[i].transit_details) !== 'undefined') ? steps[i].transit_details.line.short_name : 'Not Applicable';
           var direction = (typeof (steps[i].transit_details) !== 'undefined') ? steps[i].transit_details.headsign : 'Not Applicable';
           direction_string.push("\n\tStep" + (i + 1) + ":\n\tTravel Mode: " + steps[i].travel_mode +
@@ -213,7 +213,7 @@ function parseDirection(src, dest, json) {
   } else {
     direction_string.push("Error!! Please enter different source and destination");
     console.log("Error!! Please enter different source and destination");
-    return direction_string
+    return direction_string;
   }
 }
 
