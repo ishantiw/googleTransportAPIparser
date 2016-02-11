@@ -3,6 +3,7 @@ Parsing JSON from Google Transport API
 
 * Now print the directions on console or use the same as a json object to use it in other JS file.
 
+* use `node test_transport.js source destination`. For example, `node test_transport.js wedding alexanderplatz`
 
 * Output in the form:
 
