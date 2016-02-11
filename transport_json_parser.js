@@ -9,13 +9,13 @@ generalData = [];
 module.exports = function(src, dest, key) {
   return {
     //********To use it in other JS file, returns a string with all the directions
-    direction: function(cb) {
-      getDirections(src, dest, key, function(err, res) {
+    direction: function(callback) {
+      getDirections(src, dest, key, function(err, directionInfo) {
         //console.log("\n\tDisplaying General Info:\n \t Arrival Time: "+generalData[0].arrival_time+" \n\t Departure Time"+generalData[0].departure_time);
         if (err) {
           console.log(err);
         }
-        cb(err, res[0].direction);
+        callback(err, directionInfo[0].direction);
       });
     },
     //*********To use it for console
@@ -23,13 +23,13 @@ module.exports = function(src, dest, key) {
       getDirections(src, dest, key, function() {});
     },
     //*********To use it in other JS file, returns a JSON object with general details of the journey
-    getTransInfo: function(cb) {
-      getDirections(src, dest, key, function(err, res) {
+    getTransInfo: function(callback) {
+      getDirections(src, dest, key, function(err, directionInfo) {
         //console.log("\n\tDisplaying General Info:\n \t Arrival Time: "+generalData[0].arrival_time+" \n\t Departure Time"+generalData[0].departure_time);
         if (err) {
           console.log(err);
         }
-        cb(err, res[0].genDetails);
+        callback(err, directionInfo[0].genDetails);
       });
     }
   }
@@ -231,9 +231,9 @@ function getDirections(src, dest, key, callback) {
           direction_string.push("source or destination not found");
           console.log("source or destination not found");
         } else {
-          var temp = parseDirection(src, dest, json);
+          var tempDirection = parseDirection(src, dest, json);
 
-          callback(null, temp);
+          callback(null, tempDirection);
         }
       } else {
 
