@@ -1,12 +1,43 @@
 # Google Transport API JSON Parser
 Parsing JSON from Google Transport API
 
-* Now print the directions on console or use the same as a json object to use it in other JS file.
+* TO use it in another JS file for example to get general information about the journey
+   - 
+   ```javascript 
+        var transport = require('./transport_json_parser.js')(src, dest, key);
+        transport.getTransInfo(function(err, directionInfo) {`
+          `//Your code goes here`
+      });
+      ```
 
-* use `node test_transport.js [source] [destination] [key]`. 
+   - For example,
+     
+         ```javascript 
+          var transport = require('./transport_json_parser.js')(src, dest, key);
+
+          transport.getTransInfo(function(err, directionInfo) {
+     
+          //Example to use directionInfo to retrieve info
+     
+          console.log("\n\t<<<<<<<General Details from Test_Transport>>>>>>>" + 
+    
+          "\n\t Departure Time: " + directionInfo[0].departure_time +
+      
+          "\n\t Arrival Time: " + directionInfo[0].arrival_time +
+      
+          "\n\t Duration: " + directionInfo[0].duration +
+      
+          "\n\t Distance: " + directionInfo[0].distance);
+      
+  });
+  ```
+
+
+* To print it in console
+
+  - use `node test_transport.js [source] [destination] [key]`. 
   - For example, `node test_transport.js wedding alexanderplatz XXXXXyBCroIiU9zWXaFXXXXXXXXXXXXXXXXXXXX`
-
-* Output in the form:
+  - Output in the form:
 
 `Fetching the Directions....`
 
