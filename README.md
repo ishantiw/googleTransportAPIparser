@@ -39,17 +39,20 @@ Parsing JSON from Google Transport API
   - For example, `node test_transport.js wedding alexanderplatz XXXXXyBCroIiU9zWXaFXXXXXXXXXXXXXXXXXXXX`
   - Output in the form:
 
-`Fetching the Directions....`
+```console
 
-`***********Route from wedding to Leopoldplatz in the time zone Europe/Berlin************`
+Fetching the Directions....
 
-       ` #####Your Journey Details#####
+***********Route from wedding to Leopoldplatz in the time zone Europe/Berlin************
+
+       #####Your Journey Details#####
         Departure time from wedding: 2:57pm
         Arrival time at Leopoldplatz: 3:04pm
         Distance: 2.0 km
         duration: 8 mins
 
-        ---->Directions<----
+       
+       ---->Directions<----
 
         Step1:
         Travel Mode: WALKING
@@ -89,3 +92,4 @@ Parsing JSON from Google Transport API
          Arrival Time: 3:04pm`
          Duration: 8 mins
          Distance: 2.0 km
+```
