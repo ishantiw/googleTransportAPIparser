@@ -1,7 +1,7 @@
 # Google Transport API JSON Parser
 Parsing JSON from Google Transport API
 
-## TO use it in another JS file for example to get general information about the journey
+## To use it in another JS file for example to get general information about the journey
   * Usage
    ```javascript 
         var transport = require('./transport_json_parser.js')(src, dest, key);
@@ -42,7 +42,6 @@ Parsing JSON from Google Transport API
 	```
 	* Properties exposed:
 	
-
 		    - "step",//Number of the step
                     - "travel_mode",//Transit or walking
                     - "instructions",//Instructions
@@ -52,9 +51,8 @@ Parsing JSON from Google Transport API
                     - "duration",//duration in minutes
                     - "num_stops",//number of stops in case of transit
                     - "line",//name of the line in case of transit
-                    - "direction"//direction of the transit. ex. 'towards westbahnof'
-
-       
+                    - "direction"//direction of the transit. ex. 'towards westbahnof' 
+	
 	* Example,
 	```javascript
 		var transport = require('./transport_json_parser.js')(src, dest, key);
