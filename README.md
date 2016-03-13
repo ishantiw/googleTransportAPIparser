@@ -42,16 +42,16 @@ Parsing JSON from Google Transport API
 	```
 	* Properties exposed:
 	
-		    - "step",//Number of the step
-                    - "travel_mode",//Transit or walking
-                    - "instructions",//Instructions
-                    - "start_location",//lat and long in string format
-	            - "end_location",//lat and long in string format
-		    - "distance",//distance in KMs
-                    - "duration",//duration in minutes
-                    - "num_stops",//number of stops in case of transit
-                    - "line",//name of the line in case of transit
-                    - "direction"//direction of the transit. ex. 'towards westbahnof' 
+		    - `step`,//Number of the step
+                    - `travel_mode`,//Transit or walking
+                    - `instructions`,//Instructions
+                    - `start_location`,//lat and long in string format
+                    - `end_location`,//lat and long in string format
+                    - `distance`,//distance in KMs
+                    - `duration`,//duration in minutes
+                    - `num_stops`,//number of stops in case of transit
+                    - `line`,//name of the line in case of transit
+                    - `direction`//direction of the transit. ex. 'towards westbahnof' 
 	
 	* Example,
 	```javascript
