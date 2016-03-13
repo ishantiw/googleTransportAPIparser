@@ -40,8 +40,8 @@ Parsing JSON from Google Transport API
 		//your code goes here
 		});
 	```
-	* Properties exposed:
-	* `step`,//Number of the step
+	* Properties exposed
+        * `step`,//Number of the step
         * `travel_mode`,//Transit or walking
         * `instructions`,//Instructions
         * `start_location`,//lat and long in string format
