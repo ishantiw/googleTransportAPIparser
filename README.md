@@ -11,6 +11,7 @@ Parsing JSON from Google Transport API
       ```
 
    * Example,
+  
          ```javascript 
           var transport = require('./transport_json_parser.js')(src, dest, key);
 
@@ -40,6 +41,7 @@ Parsing JSON from Google Transport API
 		});
 	```
 	* Properties exposed:
+	
 	```javascript
 		"step",//Number of the step
                     "travel_mode",//Transit or walking
@@ -52,6 +54,7 @@ Parsing JSON from Google Transport API
                     "line",//name of the line in case of transit
                     "direction"//direction of the transit. ex. 'towards westbahnof'
            ```
+       
 	* Example,
 	```javascript
 		var transport = require('./transport_json_parser.js')(src, dest, key);
@@ -61,7 +64,7 @@ Parsing JSON from Google Transport API
 			"\n\t Travel Mode: "+ directionInfo[0].travel_mode);
 			});
 			```
-	
+			
 ## To print it in console
 
   - use `node test_transport.js [source] [destination]`. 
