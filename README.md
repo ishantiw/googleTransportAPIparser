@@ -1,5 +1,5 @@
 # Google Transport API JSON Parser
-Parsing JSON from Google Transport API
+
 
 ## To use it in another JS file for example to get general information about the journey
   * Usage
@@ -64,8 +64,8 @@ Parsing JSON from Google Transport API
 			
 ## To print it in console
 
-  - use `node test_transport.js [source] [destination]`. 
-  - For example, `node test_transport.js wedding alexanderplatz`
+  - use `node test_transport.js [source] [destination] [key]`. 
+  - For example, `node test_transport.js wedding alexanderplatz XXXXXXXXXXXXzWXaFxW0SE62XXXXXXXXXsP0XiY`
   - Output in the form:
 
 ```console
