@@ -236,7 +236,7 @@ function getDirections(src, dest, key, callback) {
           direction_string.push("source or destination not found");
         } else {
           var temp = parseDirection(src, dest, json);
-
+          console.log("Hello");
           callback(null,temp);
         }
       } else {
